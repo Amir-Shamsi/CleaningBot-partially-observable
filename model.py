@@ -27,3 +27,11 @@ class Model:
         else:
             self._save_model()
 
+    def _save_model(self):
+        os.makedirs(os.path.dirname(self.model_filename), exist_ok=True)
+        with open(self.model_filename, 'w') as f:
+            f.write('\n'.join(self.cw_data).replace(self.signs['bot'], self.signs['empty']))
+
+    def _get_place_board(self):
+        f = open(self.model_filename, 'r')
+        return f.read().split('\n')
