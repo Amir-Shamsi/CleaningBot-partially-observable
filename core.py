@@ -1,4 +1,5 @@
 from model import Model
+import math
 
 
 class CleaningAgent(Model):
@@ -20,6 +21,14 @@ class CleaningAgent(Model):
         else: return list()
 
     def run(self):
+        board = self._get_place_board()
+        posx, posy = self.bot_pos
+        next_pos = self._get_next_pos(board)
+        if len(next_pos) == 0 or self.cleanup_flag: return 'CLEAN'
+        if next_pos[0] - posx != 0: return 'DOWN' if next_pos[0] - posx > 0 else 'UP'
+        else: return 'LEFT' if next_pos[1] - posy < 0 else 'RIGHT'
+
+
 if __name__ == '__main__':
     action = CleaningAgent().run()
     print(action)
