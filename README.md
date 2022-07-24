@@ -3,7 +3,7 @@ This is my solution of Hackerrank [BotClean Partially Observable](https://www.ha
 
 **Solved score**: `28.00pts`<br>
 **Difficulty**: `Hard`<br>
-**Score Obtained**: `28.24pts`
+**Score Obtained**: `28.24pts` [See Leaderboard](https://www.hackerrank.com/challenges/botcleanv2/leaderboard/filter/school=Shiraz%20University)
 
 Let us consider a cleaning agent where the environment is `partially observable`. The bot has the same actuators and sensors. But the sensors visibility is confined to its `8 adjacent` cells.
  
