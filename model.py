@@ -1,3 +1,4 @@
+from data import Data
 import os
 
 class Model:
@@ -5,6 +6,8 @@ class Model:
 
     def __init__(self, model_filename, filename):
         self.model_filename = model_filename
+        self.bot_pos, self.cw_data, self.height, self.width = Data.get_data(filename=filename)
+
     def _update_model(self):
         if os.path.isfile(self.model_filename):
             posr, posc = self.bot_pos
