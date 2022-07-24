@@ -1,4 +1,4 @@
-# CleaningBot-partially-observable
+# CleaningBot partially observable
 This is my solution of Hackerrank [BotClean Partially Observable](https://www.hackerrank.com/challenges/botcleanv2/problem) with this info:
 
 **Solved score**: `28.00pts`<br>
